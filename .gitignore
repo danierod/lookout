@@ -1,7 +1,8 @@
 node_modules
+.pnpm-store
 dist
 .env
 *.local
-server/data
+poc/server/data
 *.sqlite
 .DS_Store

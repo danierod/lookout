@@ -6,6 +6,8 @@ import express from "express"
 import { redis } from "./cache/redis.js"
 import { config } from "./config.js"
 import { AppDataSource } from "./data-source.js"
+import { tokensRouter } from "./routes/tokens.js"
+import { walletRouter } from "./routes/wallet.js"
 
 mkdirSync(dirname(config.databasePath), { recursive: true })
 
@@ -16,6 +18,9 @@ app.use(express.json())
 app.get("/health", (_req, res) => {
   res.json({ ok: true })
 })
+
+app.use(walletRouter)
+app.use(tokensRouter)
 
 await AppDataSource.initialize()
 

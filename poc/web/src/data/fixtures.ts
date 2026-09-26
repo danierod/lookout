@@ -6,6 +6,7 @@ export type Token = {
   change24h: number
   liquidityUsd: number
   volume24h: number
+  iconUrl?: string | null
 }
 
 export type Holding = Token & {
