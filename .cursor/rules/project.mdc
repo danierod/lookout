@@ -1,0 +1,18 @@
+---
+description: Lookout doc map and boundaries that apply to every change
+alwaysApply: true
+---
+
+# Lookout
+
+Read `AGENTS.md` before changing the product. The product implementation has not started. `docs/` describes that product only.
+
+`poc/` is a proof of concept. Read `poc/AGENTS.md` before changing it. Keep its docs inside `poc/`. Do not record it in `docs/`, `README.md`, or the root `AGENTS.md`.
+
+When a change alters product behavior or a product boundary, update the matching doc under `docs/` in the same change.
+
+Trade off in this order: user experience, then engineering quality, then velocity. Detail is in `docs/product.md`.
+
+UI code follows `docs/engineering.md`.
+
+A wallet is a public Solana address. Do not add key import, signing, or buy, sell, or send execution unless `docs/product.md` and a new file in `docs/decisions/` say so.
