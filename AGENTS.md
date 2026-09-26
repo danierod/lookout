@@ -11,7 +11,10 @@ This file is for the Lookout product. The product implementation has not started
 | `docs/product.md` | What to build, and in what order |
 | `docs/architecture.md` | Product structure. No implementation is recorded here yet. |
 | `docs/engineering.md` | Code rules UI work must follow |
+| `DESIGN.md` | Visual language agents follow |
+| `docs/design/theme.css` | Token values UI code uses |
 | `docs/decisions/` | Choices the product must keep |
+| `docs/features/_template.md` | Blank brief for a new feature |
 
 ## Boundaries
 
@@ -26,7 +29,19 @@ Update the doc that owns the fact in the same change:
 - A product boundary or priority → `docs/product.md`
 - A package, route, or data flow in the product → `docs/architecture.md`
 - A code rule for UI work → `docs/engineering.md`
+- A visual token → `DESIGN.md` and `docs/design/theme.css` in the same change
 - A choice that later work must not undo → a new file in `docs/decisions/`
+- A feature brief → `docs/features/<feature-name>.md`, copied from `docs/features/_template.md`
 - A command or invariant on this page → `AGENTS.md`
+
+## Draft or plan a feature
+
+When the user asks to draft or plan a new feature, copy `docs/features/_template.md` to `docs/features/<feature-name>.md` and fill it in the same change.
+
+- Write only what the user, `docs/product.md`, and the decision records already support.
+- Leave **Open** as an unanswered list. Do not invent an answer to close an item.
+- Do not put colors, type, spacing, radius, or component structure in the brief.
+- When the feature changes what the product is, update `docs/product.md` in the same change.
+- When the feature locks a boundary later work must not undo, add a file in `docs/decisions/` in the same change.
 
 When a trade-off is required, use this order: user experience, then engineering quality, then velocity.

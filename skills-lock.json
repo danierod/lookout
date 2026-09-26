@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "skills": {
+    "algorithmic-color-palette": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/algorithmic-color-palette/SKILL.md",
+      "computedHash": "edbee625a90db8231fdcd6a4cce8af87f102a58125e26cf65c8edd08543e03b7"
+    },
+    "button-states": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/button-states/SKILL.md",
+      "computedHash": "12972a32d830b68e7ac126a6b90a7a711093036a2ddb01d4c67310de91d7b8a2"
+    },
+    "component-family-consistency": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/component-family-consistency/SKILL.md",
+      "computedHash": "1f73fe7ec0a57b3a760c0d8b789d2d8256b387c83d348abd8a6757172660ea97"
+    },
+    "data-display-and-selection": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/data-display-and-selection/SKILL.md",
+      "computedHash": "a8313cc6fd08223712bbb8f2753cbdb58b9dc008528af6ffb4d2b36a69f963e1"
+    },
+    "loading-states-and-perceived-performance": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/loading-states-and-perceived-performance/SKILL.md",
+      "computedHash": "1797cf9b8a678d884909f24b16a14d9f9f835b7057d0712ed6622dbbfbe7a9e3"
+    },
+    "modular-scale-typography": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/modular-scale-typography/SKILL.md",
+      "computedHash": "5d5f9ab797b231e1fd5ea85ae82d3db47f4d83c2c6002fb6b9017a1f5091a08c"
+    },
+    "notifications-and-recovery": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/notifications-and-recovery/SKILL.md",
+      "computedHash": "d596e74ddc67b3bc596320f03fde0c6b42fc3998e276124cb413b857144d391d"
+    },
+    "status-colors-and-errors": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/status-colors-and-errors/SKILL.md",
+      "computedHash": "2ead436c06fb8b5b165aee7a165b89e62d62c28a22e4fd3e45976508fb879f0a"
+    },
+    "ui-density": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui-density/SKILL.md",
+      "computedHash": "618879d7763ead8eed629366be4fb514ae8dc4a467f89965b43db43fa352c2fb"
+    },
+    "visual-emphasis-and-hierarchy": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/visual-emphasis-and-hierarchy/SKILL.md",
+      "computedHash": "dab7aa93c991662916a98ff3d60750f9d60e90c34f1729a769a324c604151275"
+    },
+    "wcag-accessibility": {
+      "source": "dembrandt/dembrandt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/wcag-accessibility/SKILL.md",
+      "computedHash": "a0d5ccc46e07e2f76c8a66a47b52e30b1128f605df97bada8d4d5445a6ac2b7d"
+    }
+  }
+}
