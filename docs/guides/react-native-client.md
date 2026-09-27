@@ -6,9 +6,11 @@ This guide explains the React Native client. The locked choices live in [0003 Re
 
 The product client is Expo SDK 57 (React Native 0.86, React 19.2), TypeScript, and Expo Router. New Architecture is already on. A development build is the daily app. Store Expo Go is still on SDK 54, and MMKV, notifications, Sentry, and charts need native code. Continuous native generation keeps native setup in config plugins; `ios/` and `android/` are generated at build time.
 
+The iOS 27 SDK (Xcode 27) will not launch an app that still uses the old `UIApplication` lifecycle. SDK 57 opts in through `expo-build-properties` with `ios.enableSceneSupport` set to `true`. SDK 58 turns scene support on by default, so that property can go away on the next SDK bump.
+
 SDK 56 documents iOS 16.4+ and Android 7+. SDK 57 is a small React Native 0.86 bump on that base.
 
-Open these accounts before the first release: Apple Developer Program ($99/year; an individual account is enough while the app only reads public addresses; a later wallet that stores or moves assets falls under App Store guideline 3.1.5(i) and needs an organization account), Google Play Console ($25 once), an Expo account, a public privacy policy URL, a bundle id, an Android application id, and a URL scheme such as `lookout://`.
+Open these accounts before the first release: Apple Developer Program ($99/year; an individual account is enough while the app only reads public addresses; a later wallet that stores or moves assets falls under App Store guideline 3.1.5(i) and needs an organization account), Google Play Console ($25 once), an Expo account, a public privacy policy URL, the bundle id `com.lookout.app`, the Android application id `com.lookout.app`, and the URL scheme `lookout://`.
 
 In store questionnaires, describe a portfolio viewer. Reviewers often treat any Solana UI as an exchange. The review note should say the app shows public holdings and does not custody assets, sign, or trade.
 
