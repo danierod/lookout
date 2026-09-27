@@ -26,7 +26,7 @@ export function TokenRow({ token, detail }: { token: Token; detail?: string }) {
       <span className="row-price">
         <strong>{formatUsd(token.priceUsd)}</strong>
         {token.change24h ? (
-          <small className={token.change24h >= 0 ? "up" : "down"}>{formatChange(token.change24h)}</small>
+          <small className={token.change24h >= 0 ? "gain" : "loss"}>{formatChange(token.change24h)}</small>
         ) : null}
       </span>
     </Link>

@@ -17,4 +17,6 @@ Keep new screens inside the table in `poc/docs/architecture.md`. A screen that c
 
 ## UI
 
-Match the existing visual language. Prefer a continuous path back to portfolio or import over a dead end. Buy and sell controls on the trade page are a preview. They must not sign or send.
+Follow the product visual language in [DESIGN.md](../../DESIGN.md) and [docs/design/theme.css](../../docs/design/theme.css). `src/main.tsx` imports that theme file. Do not invent colors, type sizes, spacing, radius, or durations in this app. The theme is light only.
+
+Prefer a continuous path back to portfolio or import over a dead end. Buy and sell controls on the trade page are a preview. They must not sign or send.

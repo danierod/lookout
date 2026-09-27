@@ -10,10 +10,10 @@ export function WatchlistPage() {
 
   return (
     <section>
-      <p className="eyebrow">Watchlist</p>
+      <p className="caption">Watchlist</p>
       <h1>Watching</h1>
       {rows.length === 0 ? (
-        <p className="muted empty">
+        <p>
           Nothing saved. <Link to={paths.tokens}>Browse tokens</Link> and add one.
         </p>
       ) : (

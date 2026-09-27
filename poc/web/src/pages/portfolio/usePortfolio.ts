@@ -30,16 +30,20 @@ function tokenDetails(data: TokenDetail | TokenDetail[] | undefined) {
 export const usePortfolio = () => {
   const walletAddress = useWalletUi().address
 
-  const fetchHoldings =  () => {
-    return fetch(`${apiBaseUrl}/v1/wallet/${walletAddress}/balances`).then((response) => response.json())
+  const fetchHoldings = async () => {
+    const response = await fetch(`${apiBaseUrl}/v1/wallet/${walletAddress}/balances`)
+    if (!response.ok) throw new Error("Balances request failed")
+    return response.json() as Promise<BalanceReturnType>
   }
 
-  const {data: holdings} = useQuery<BalanceReturnType>({
+  const holdingsQuery = useQuery<BalanceReturnType>({
     queryKey: ['portfolio', walletAddress],
     queryFn: fetchHoldings,
     enabled: !!walletAddress,
     staleTime: 30_000
   })
+
+  const holdings = holdingsQuery.data
 
   const fetchTokens = (mints?: string) => {
     return fetch(`${apiBaseUrl}/v1/tokens/${mints}`).then(response => response.json())
@@ -72,6 +76,9 @@ export const usePortfolio = () => {
     balances,
     total: holdings?.total,
     tokens,
+    isLoading: holdingsQuery.isLoading,
+    isError: holdingsQuery.isError,
+    refetch: holdingsQuery.refetch,
   };
 
 }

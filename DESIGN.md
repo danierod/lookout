@@ -4,8 +4,7 @@ name: Lookout
 description: Warm paper, one blue accent, and an ink primary action. Light theme only.
 colors:
   background: "#ffffff"
-  surface: "#f6f4ef"
-  surface-sunken: "#eae6dd"
+  fill: "#eae6dd"
   text: "#474645"
   text-muted: "#6f6c66"
   ink: "#1c1b19"
@@ -72,13 +71,13 @@ components:
     backgroundColor: "{colors.ink}"
     textColor: "{colors.on-ink}"
   button-secondary:
-    backgroundColor: "{colors.surface}"
+    backgroundColor: "{colors.background}"
     textColor: "{colors.text}"
     typography: "{typography.label}"
     rounded: "{rounded.full}"
     height: 40px
   button-secondary-hover:
-    backgroundColor: "{colors.surface-sunken}"
+    backgroundColor: "{colors.fill}"
     textColor: "{colors.text}"
 ---
 
@@ -88,19 +87,18 @@ components:
 
 Lookout is a calm portfolio view. A person should read holdings without a marketing page or a second visual language.
 
-The UI is light, warm, and quiet. White is the page. Cream is a grouped surface. Warm gray is body text. Near-black ink is the one primary action. One blue marks focus, selection, and charts. Green marks profit and a successful action. Red marks a loss and a failed action. Profit and success use different greens. Loss and failure use different reds.
+The UI is light, warm, and quiet. White is the page and the secondary button. A title and the space around it mark a section. Warm gray is body text. Near-black ink is the one primary action. One blue marks focus, selection, and charts. Green marks profit and a successful action. Red marks a loss and a failed action. Profit and success use different greens. Loss and failure use different reds.
 
 Density stays comfortable. Body text is 17px. A screen uses two weights at most: 400 and 600.
 
 ## Colors
 
-Text on white is about 9.4:1. Text on cream is about 8.6:1. Both clear WCAG AAA. Muted text on white is about 5.2:1 and clears AA.
+Text on white is about 9.4:1. Text on the fill is about 7.6:1. Both clear WCAG AAA. Muted text on white is about 5.2:1 and clears AA.
 
 The accent blue on white is about 3.6:1. That clears the 3:1 bar for a focus ring and fails the 4.5:1 bar for text. White text on the blue fails the same way.
 
-- **Background (#ffffff):** The page.
-- **Surface (#f6f4ef):** A grouped region, such as a wallet or a look.
-- **Surface sunken (#eae6dd):** A nested well, a secondary hover, or a pressed row.
+- **Background (#ffffff):** The page and the secondary button.
+- **Fill (#eae6dd):** Hover on a secondary button, a nav item, or a row. Also a disabled control, a skeleton, and a placeholder mark.
 - **Text (#474645):** Body copy and secondary actions.
 - **Text muted (#6f6c66):** Captions and metadata.
 - **Ink (#1c1b19):** The primary button and any text that must be stronger than body copy.
@@ -126,7 +124,7 @@ The face is Source Sans 3, licensed under the SIL Open Font License 1.1. The fil
 
 Space sits on a 4px grid: 4, 8, 16, 24, 32, 48, and 64. Use those steps. A one-off value such as 5px, 6px, or 9px is a miss.
 
-Group a wallet's holdings inside one surface with 16px or 24px of padding. Separate those rows with space. A hairline between holdings clutters the list and makes it harder to follow. Use a hairline only when space cannot keep adjacent rows distinct. Do not give each asset its own card.
+A section is a title and the space around it. Sections content sit on the white page. Do not wrap a section in a padded box, and do not fill it with a different background. Separate rows with space. A hairline between rows clutters the list and makes it harder to follow. Use a hairline only when space cannot keep adjacent rows distinct. Do not give each asset its own card.
 
 The page margin is 16px on a narrow screen and 32px from 768px up. The content column stops at 960px.
 
@@ -134,17 +132,17 @@ Breakpoints for layout shifts are 640px, 768px, and 1024px.
 
 ## Elevation & Depth
 
-Resting surfaces do not float. A border or a change from white to cream separates regions.
+Resting content does not float and does not sit on a different background panel. Space and a title separate sections.
 
 One shadow exists, and only for a layer that covers the page, such as a dialog: `0 8px 24px rgba(28, 27, 25, 0.12)`.
 
 ## Shapes
 
-Controls that are actions are pills (`999px`). Cards, inputs, and grouped surfaces use 8px. Use 4px only for a tiny nested mark, such as a status chip. Use 12px when a surface is large enough that 8px looks tight. Do not mix a pill and a sharp corner on the same control.
+Controls that are actions are pills (`999px`). Inputs use 8px. Use 4px only for a tiny nested mark, such as a status chip. A dialog uses 12px. Do not give a section a radius. Do not mix a pill and a sharp corner on the same control.
 
 ## Components
 
-**Buttons.** One ink button per view. Height 40px, label 15px, horizontal padding 16px. Hover lightens ink to `#343330`. Active returns to ink. Focus draws a 2px accent ring with 2px of offset. Disabled uses the sunken surface and muted text, and it does not respond to hover. A loading button keeps its size and replaces the label with a progress state. A second action is a cream button with a hairline, not a second ink button, and not a blue button.
+**Buttons.** One ink button per view. Height 40px, label 15px, horizontal padding 16px. Hover lightens ink to `#343330`. Active returns to ink. Focus draws a 2px accent ring with 2px of offset. Disabled uses the fill and muted text, and it does not respond to hover. A loading button keeps its size and replaces the label with a progress state. A second action is a white button with a hairline, not a second ink button, and not a blue button.
 
 **Links.** Body color, underlined. The accent blue is not a link color.
 
@@ -167,6 +165,7 @@ State changes use 180ms and `cubic-bezier(0.4, 0, 0.2, 1)`. A larger enter, such
 - Don't put white or cream text on the accent blue.
 - Don't use the accent blue for body copy or links.
 - Don't ship another product's font files or token export as this system.
-- Don't draw a hairline between holdings. Space is the separator.
-- Don't put a shadow on a resting card.
+- Don't draw a hairline between rows. Space is the separator.
+- Don't paint a section or wrap it in a padded box.
+- Don't put a shadow on resting content.
 - Don't use a third font weight on a screen.

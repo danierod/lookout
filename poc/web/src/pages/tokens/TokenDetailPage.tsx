@@ -22,11 +22,10 @@ export function TokenDetailPage() {
 
   return (
     <section>
-      <p className="eyebrow">{token.name}</p>
+      <p className="caption">{token.name}</p>
       <h1>{token.symbol}</h1>
-      <p className={token.change24h >= 0 ? "up" : "down"}>
-        {formatUsd(token.priceUsd)} · {formatChange(token.change24h)}
-      </p>
+      <p className="display">{formatUsd(token.priceUsd)}</p>
+      <p className={token.change24h >= 0 ? "gain" : "loss"}>{formatChange(token.change24h)}</p>
       <dl className="stats">
         <div>
           <dt>Mint</dt>
@@ -42,15 +41,15 @@ export function TokenDetailPage() {
         </div>
       </dl>
       <div className="actions">
-        <button type="button" className="ghost" onClick={() => toggleWatch(token.mint)}>
-          {watched ? "Remove from watchlist" : "Add to watchlist"}
-        </button>
         <Link className="button" to={tradePath(token.mint, "buy")}>
           Buy
         </Link>
-        <Link className="button ghost" to={tradePath(token.mint, "sell")}>
+        <Link className="button secondary" to={tradePath(token.mint, "sell")}>
           Sell
         </Link>
+        <button type="button" className="text" onClick={() => toggleWatch(token.mint)}>
+          {watched ? "Remove from watchlist" : "Add to watchlist"}
+        </button>
       </div>
     </section>
   )

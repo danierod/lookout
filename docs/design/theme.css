@@ -45,8 +45,7 @@
 
 :root {
   --color-background: #ffffff;
-  --color-surface: #f6f4ef;
-  --color-surface-sunken: #eae6dd;
+  --color-fill: #eae6dd;
   --color-text: #474645;
   --color-text-muted: #6f6c66;
   --color-ink: #1c1b19;
@@ -56,7 +55,7 @@
   --color-gain: #067647;
   --color-loss: #b42318;
   --color-success: #267614;
-  --color-error: #8c2d18;
+  --color-error: #8c1818;
   --color-border: #d9d4cb;
 
   --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;

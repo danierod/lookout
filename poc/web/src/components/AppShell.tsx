@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom"
+import { Link, NavLink, Outlet } from "react-router-dom"
 import { paths } from "../app/paths.ts"
 import { useWalletUi } from "../app/wallet-ui.tsx"
 import { shortenAddress } from "../lib/format.ts"
@@ -11,16 +11,21 @@ const links = [
 
 export function AppShell() {
   const { address } = useWalletUi()
+  const short = shortenAddress(address)
 
   return (
     <div className="shell">
       <aside className="side">
-        <NavLink to={paths.portfolio} className="brand">
+        <Link to={paths.portfolio} className="brand">
           Lookout
-        </NavLink>
+        </Link>
         <nav className="nav" aria-label="Main">
           {links.map((link) => (
-            <NavLink key={link.to} to={link.to} className="nav-link">
+            <NavLink
+              key={link.to}
+              to={link.to}
+              className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+            >
               {link.label}
             </NavLink>
           ))}
@@ -28,9 +33,9 @@ export function AppShell() {
       </aside>
       <div className="workspace">
         <header className="topbar">
-          <NavLink to={paths.import} className="address">
-            {shortenAddress(address)}
-          </NavLink>
+          <Link to={paths.import} className="button secondary" aria-label={`Wallet ${short}. Change wallet.`}>
+            {short}
+          </Link>
         </header>
         <main className="content">
           <Outlet />

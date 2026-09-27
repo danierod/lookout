@@ -20,19 +20,18 @@ export function TokenSearchPage() {
 
   return (
     <section>
-      <p className="eyebrow">Tokens</p>
+      <p className="caption">Tokens</p>
       <h1>Search</h1>
-      <label className="sr-only" htmlFor="token-search">
-        Search tokens
-      </label>
-      <input
-        id="token-search"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        placeholder="Symbol, name, or mint"
-      />
+      <div className="field">
+        <label htmlFor="token-search">Symbol, name, or mint</label>
+        <input
+          id="token-search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+        />
+      </div>
       {results.length === 0 ? (
-        <p className="muted empty">No tokens match that search.</p>
+        <p>No tokens match that search.</p>
       ) : (
         <div className="list">
           {results.map((token) => (

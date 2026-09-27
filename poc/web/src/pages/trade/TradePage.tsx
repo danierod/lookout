@@ -29,39 +29,37 @@ export function TradePage() {
 
   return (
     <section>
-      <p className="eyebrow">
+      <p className="caption">
         <Link to={tokenPath(token.mint)}>{token.symbol}</Link>
       </p>
       <h1>{side === "buy" ? "Buy" : "Sell"}</h1>
-      <div className="segment" role="tablist" aria-label="Side">
+      <div className="segment" role="group" aria-label="Side">
         <button
           type="button"
-          role="tab"
-          aria-selected={side === "buy"}
-          className={side === "buy" ? "on" : ""}
+          aria-pressed={side === "buy"}
           onClick={() => setSearchParams({ side: "buy" })}
         >
           Buy
         </button>
         <button
           type="button"
-          role="tab"
-          aria-selected={side === "sell"}
-          className={side === "sell" ? "on" : ""}
+          aria-pressed={side === "sell"}
           onClick={() => setSearchParams({ side: "sell" })}
         >
           Sell
         </button>
       </div>
-      <label htmlFor="amount">{side === "buy" ? "You pay (USDC)" : `You sell (${token.symbol})`}</label>
-      <input
-        id="amount"
-        inputMode="decimal"
-        value={amount}
-        onChange={(event) => setAmount(event.target.value)}
-      />
-      <div className="card quote">
-        <p className="muted">Sample rate · {formatUsd(token.priceUsd)}</p>
+      <div className="field">
+        <label htmlFor="amount">{side === "buy" ? "You pay (USDC)" : `You sell (${token.symbol})`}</label>
+        <input
+          id="amount"
+          inputMode="decimal"
+          value={amount}
+          onChange={(event) => setAmount(event.target.value)}
+        />
+      </div>
+      <div className="quote">
+        <p className="caption">Sample rate · {formatUsd(token.priceUsd)}</p>
         <p className="quote-out">
           You receive {receive.toLocaleString("en-US", { maximumFractionDigits: 4 })} {receiveLabel}
         </p>
@@ -69,7 +67,7 @@ export function TradePage() {
       <button type="button" disabled>
         Continue
       </button>
-      <p className="muted">Quote handoff is not connected.</p>
+      <p>Quote handoff is not connected.</p>
     </section>
   )
 }
