@@ -4,7 +4,7 @@ Lookout lets a person see wallet portfolios from public addresses, in one place.
 
 Buy, sell, and send stay out of scope until the product imports a wallet. That import is later work.
 
-The product implementation has not started.
+The client package is `app`. Run it from the repo root with `pnpm app`. Feature work has not started.
 
 ## Docs
 

@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Lookout
 
-Read `AGENTS.md` before changing the product. The product implementation has not started. `docs/` describes that product only.
+Read `AGENTS.md` before changing the product. The client package is `app`. Feature work has not started. `docs/` describes that product only.
 
 `poc/` is a proof of concept. Read `poc/AGENTS.md` before changing it. Keep its docs inside `poc/`. Do not record it in `docs/`, `README.md`, or the root `AGENTS.md`.
 

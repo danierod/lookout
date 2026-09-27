@@ -1,6 +1,6 @@
 # Agent guide
 
-This file is for the Lookout product. The product implementation has not started.
+This file is for the Lookout product. The client package is `app`. Feature work has not started.
 
 `poc/` is a separate proof of concept. It is not the product architecture, the chosen stack, or the place for product code. When a task is about that proof of concept, read `poc/AGENTS.md`. Keep every proof-of-concept change and doc inside `poc/`.
 
@@ -11,10 +11,21 @@ This file is for the Lookout product. The product implementation has not started
 | `docs/product.md` | What to build, and in what order |
 | `docs/architecture.md` | Product structure. No implementation is recorded here yet. |
 | `docs/engineering.md` | Code rules UI work must follow |
+| `docs/guides/react-native-client.md` | How the React Native client is set up, and why |
 | `DESIGN.md` | Visual language agents follow |
 | `docs/design/theme.css` | Token values UI code uses |
 | `docs/decisions/` | Choices the product must keep |
 | `docs/features/_template.md` | Blank brief for a new feature |
+
+## Commands
+
+Run the client app from the repo root:
+
+```sh
+pnpm app
+```
+
+That starts the Expo dev server for the `app` package.
 
 ## Boundaries
 
