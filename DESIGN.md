@@ -85,7 +85,7 @@ components:
 
 ## Overview
 
-Lookout is a calm portfolio view. A person should read holdings without a marketing page or a second visual language.
+Lookout is a calm portfolio view, where UX and delight are first class citizens. A person should read holdings without a marketing page or a second visual language.
 
 The UI is light, warm, and quiet. White is the page and the secondary button. A title and the space around it mark a section. Warm gray is body text. Near-black ink is the one primary action. One blue marks focus, selection, and charts. Green marks profit and a successful action. Red marks a loss and a failed action. Profit and success use different greens. Loss and failure use different reds.
 
@@ -152,7 +152,29 @@ Controls that are actions are pills (`999px`). Inputs use 8px. Use 4px only for 
 
 **Dialogs.** A dialog traps focus, closes on Escape, and returns focus to the opener. Its surface is white, its radius is 12px, and it uses the overlay shadow.
 
-State changes use 180ms and `cubic-bezier(0.4, 0, 0.2, 1)`. A larger enter, such as a dialog, may use 280ms and `cubic-bezier(0.16, 1, 0.3, 1)`. A press may use 120ms.
+## Motion
+
+State changes use 180ms and `cubic-bezier(0.4, 0, 0.2, 1)`. A larger enter, such as a dialog or a layer, may use 280ms and `cubic-bezier(0.16, 1, 0.3, 1)`. A press may use 120ms.
+
+Motion shows where the person went. A change with no new place stays still.
+
+Portfolio to wallet to asset is a step deeper, so that move may travel. Tab peers do not slide.
+
+An element that remains on the next screen remains that same element. Do not fade it out and fade a copy in.
+
+A label that changes meaning changes in view. Letters shared by the old label and the new label stay put while the rest changes. An instant swap hides the new meaning. This is the rule for a commitment change, for example a button whose label moves from a continue step to a confirm step.
+
+A daily action stays within the base duration or stays still. A rare moment, such as a first empty portfolio or a finished setup, may use the slow duration.
+
+## Layers
+
+A short task sits in a layer over the current screen. One layer holds one fact or one primary action. The page underneath stays visible in place.
+
+A layer that follows another uses a different height, so the step is obvious. Change the copy when equal heights would hide the change.
+
+The first layer has a control that dismisses it. A layer opened from that layer puts a back control in the same place. The mark transforms from dismiss to back. It does not pop from one icon to the other.
+
+A layer may grow into a full screen when the task stops being short. The growing layer is the same surface.
 
 ## Do's and Don'ts
 
@@ -161,6 +183,11 @@ State changes use 180ms and `cubic-bezier(0.4, 0, 0.2, 1)`. A larger enter, such
 - Do use gain and loss only for profit and loss.
 - Do use success and error only for a successful or failed action.
 - Do keep one ink button as the primary action on a screen.
+- Do give empty, error, and seldom-used screens the same type, space, and color as the rest of the app.
+- Do keep a layer on one fact or one primary action.
+- Do change a layer's height when another layer opens on top of it.
+- Do transform a dismiss mark into a back mark when a second layer opens.
+- Do keep shared letters in place when a label changes meaning.
 - Don't write a raw hex, a one-off font size, or a one-off spacing value in a component.
 - Don't put white or cream text on the accent blue.
 - Don't use the accent blue for body copy or links.
@@ -169,3 +196,6 @@ State changes use 180ms and `cubic-bezier(0.4, 0, 0.2, 1)`. A larger enter, such
 - Don't paint a section or wrap it in a padded box.
 - Don't put a shadow on resting content.
 - Don't use a third font weight on a screen.
+- Don't slide between tab peers.
+- Don't replace a persistent element with a duplicate during a transition.
+- Don't swap a label that changes meaning in a single frame.

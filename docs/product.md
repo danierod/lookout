@@ -28,6 +28,7 @@ The product has to be enjoyable. That is what keeps people using it.
 - **Clean and consistent UI.** One visual language lowers cognitive load and builds trust.
 - **Features that matter.** Low-value features are a no-go. Understand the problem and build only for that.
 - **No dead ends.** Every flow stays continuous. The person always has a clear next step, even when that step returns them to the start.
+- **Relevant next.** The total and the holdings stay in reach. A chart, a stat, or an extra action appears when the person asks for it. One surface does one job. A short step covers the current page and leaves that page in place. A full screen is a place the person stays.
 
 ### Engineering quality
 
