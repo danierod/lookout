@@ -19,7 +19,7 @@ In store questionnaires, describe a portfolio viewer. Reviewers often treat any 
 Create the app with:
 
 ```bash
-npx create-expo-app@latest --template default@sdk-57
+pnpm dlx create-expo-app@latest --template default@sdk-57
 ```
 
 Then run `eas init` with development, preview, and production build profiles. Each profile has a matching EAS Update channel. Add `expo-dev-client`. Use EAS environment variables for API keys. A Helius or price-API key stays on a server. The app calls that API. Use strict TypeScript, the Expo ESLint config, and CI that typechecks, lints, and runs unit tests on every pull request.
@@ -51,7 +51,7 @@ Query does not ask "is the app open?" inside every `useQuery`. Two process-wide 
 
 Both start optimistic: focused, and online. On a phone, nothing ever flips those flags, so a return from the home screen does no refresh, and airplane mode still burns the default three retries.
 
-Install NetInfo with `npx expo install @react-native-community/netinfo`. Call both setups once from the Expo Router root layout, before any screen runs `useQuery`.
+Install NetInfo with `pnpm expo install @react-native-community/netinfo` from `app/`. Call both setups once from the Expo Router root layout, before any screen runs `useQuery`.
 
 AppState has three values. Only `active` counts as focused. `background` and iOS `inactive` (app switcher, notification shade, incoming call) count as not focused.
 

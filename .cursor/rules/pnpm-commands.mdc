@@ -1,0 +1,23 @@
+---
+description: Give and run commands with pnpm, never npx
+alwaysApply: true
+---
+
+# Commands use pnpm
+
+Give commands with pnpm. Run them with pnpm. Do not use `npx`.
+
+- From `app/`, the Expo CLI is `pnpm expo <command>`.
+- A project binary is `pnpm exec <command>`.
+- A package script is `pnpm <script>`.
+- A tool that is not installed is `pnpm dlx <package>`.
+- From the repo root, `pnpm app` starts the Expo dev server.
+
+```sh
+pnpm expo install <package>
+pnpm expo prebuild --platform ios --clean
+pnpm expo run:ios
+pnpm exec tsc --noEmit
+```
+
+`pnpm expo install` picks the SDK-compatible version. Do not use `pnpm add` for an Expo module.

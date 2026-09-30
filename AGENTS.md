@@ -27,6 +27,8 @@ pnpm app
 
 That starts the Expo dev server for the `app` package.
 
+Give and run commands with pnpm. Do not use `npx`. From `app/`, the Expo CLI is `pnpm expo <command>`. A project binary is `pnpm exec <command>`. A tool that is not installed is `pnpm dlx <package>`.
+
 ## Boundaries
 
 - A wallet is a public Solana address. Do not add key import, signing, or buy/sell/send execution. See [docs/decisions/0001-address-only-lookup.md](docs/decisions/0001-address-only-lookup.md).
