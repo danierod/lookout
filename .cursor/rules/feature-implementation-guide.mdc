@@ -1,0 +1,18 @@
+---
+description: Name and place feature implementation guides next to the feature brief
+alwaysApply: true
+---
+
+# Feature implementation guides
+
+When the user asks for an implementation guide for a feature, write it beside the feature brief.
+
+- Brief: `docs/features/<feature-name>.md`
+- Guide: `docs/features/<feature-name>-guide.md`
+
+Example: `docs/features/startup.md` → `docs/features/startup-guide.md`.
+
+- Same folder as the brief. Do not put the guide in `docs/guides/` or next to code.
+- The guide is the step-by-step build of that brief. Do not paste the guide into the brief.
+- Leave **Open** unanswered. Do not invent a product decision to finish a step.
+- Steps stay inside the brief, `docs/product.md`, and `docs/decisions/`.

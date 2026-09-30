@@ -16,6 +16,7 @@ This file is for the Lookout product. The client package is `app`. Feature work 
 | `docs/design/theme.css` | Token values UI code uses |
 | `docs/decisions/` | Choices the product must keep |
 | `docs/features/_template.md` | Blank brief for a new feature |
+| `docs/features/<feature-name>-guide.md` | Step-by-step build of that feature brief |
 
 ## Commands
 
@@ -58,3 +59,11 @@ When the user asks to draft or plan a new feature, copy `docs/features/_template
 - When the feature locks a boundary later work must not undo, add a file in `docs/decisions/` in the same change.
 
 When a trade-off is required, use this order: user experience, then engineering quality, then velocity.
+
+## Implementation guide
+
+When the user asks for an implementation guide for a feature, write `docs/features/<feature-name>-guide.md` in the same folder as `docs/features/<feature-name>.md`.
+
+Example: `docs/features/startup.md` → `docs/features/startup-guide.md`.
+
+The guide is the steps to build that brief. Leave **Open** unanswered. Do not invent a product decision to finish a step.
